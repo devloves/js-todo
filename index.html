@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="styles.css" />
+	<style>
+	.theme svg{
+		width: 10%;
+		height: 10%;
+		margin: 5px;
+	}
+	</style>
+  </head>
+  <body>
+	<script>
+	function theme1() {
+		document.body.style.background = '#F3706B';
+	}
+	function theme2() {
+		document.body.style.background = '#9F659D';
+	}
+	function theme3() {
+		document.body.style.background = '#edbf5c';
+	}
+	function theme4() {
+		document.body.style.background = '#7aca5e';
+	}
+	function theme5() {
+		document.body.style.background = '#4694ae';
+	}
+	</script>
+    <main>
+      <div class="container">
+        <h1 class="app-title">Todos</h1>
+		<center>
+		<span style="text-align:center; font-size: 10px;color: #fff;">TIP: you can change the theme<span>
+		</center>
+		<div style="display: flex; align-items: center; justify-content: center;padding-bottom: 2rem;" class="theme">
+		<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+		onclick="theme1()">
+		<circle cx="7" cy="7" r="6" fill="#F3706B" stroke="white" stroke-width="1"/>
+		</svg>
+		<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+		onclick="theme2( )">
+		<circle cx="7" cy="7" r="6" fill="#9F659D" stroke="white" stroke-width="1"/>
+		</svg>
+		<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+		onclick="theme3()">
+		<circle cx="7" cy="7" r="6" fill="#edbf5c" stroke="white" stroke-width="1"/>
+		</svg>
+		<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+		onclick="theme4()">
+		<circle cx="7" cy="7" r="6" fill="#7aca5e" stroke="white" stroke-width="1"/>
+		</svg>
+		<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+		onclick="theme5()">
+		<circle cx="7" cy="7" r="6" fill="#4694ae" stroke="white" stroke-width="1"/>
+		</svg>
+		<br>
+		</div>
+        <ul class="todo-list js-todo-list"></ul>
+        <!-- add the empty state here -->
+        <div class="empty-state">
+          <h2 class="empty-state__title">Add your first todo</h2>
+          <p class="empty-state__description">
+            What do you want to get done today?
+          </p>
+        </div>
+        <!-- end -->
+        <form class="js-form">
+          <input
+            autofocus
+            type="text"
+            aria-label="Enter a new todo item"
+            placeholder="E.g. Build a web app"
+            class="js-todo-input"
+          />
+        </form>
+      </div>
+    </main>
+
+    <svg>
+      <defs>
+        <symbol id="delete-icon" viewBox="0 0 448 448">
+          <path
+            d="m224 0c-123.710938 0-224 100.289062-224 224s100.289062 224 224 224 224-100.289062 224-224c-.132812-123.65625-100.34375-223.867188-224-224zm124.449219 325.824219c4.15625 4.015625 5.828125 9.964843 4.363281 15.558593s-5.835938 9.964844-11.429688 11.429688-11.542968-.207031-15.558593-4.363281l-101.824219-101.824219-101.824219 101.824219c-6.277343 6.0625-16.257812 5.976562-22.429687-.195313s-6.257813-16.152344-.195313-22.429687l101.824219-101.824219-101.824219-101.824219c-4.15625-4.015625-5.828125-9.964843-4.363281-15.558593s5.835938-9.964844 11.429688-11.429688 11.542968.207031 15.558593 4.363281l101.824219 101.824219 101.824219-101.824219c6.277343-6.0625 16.257812-5.976562 22.429687.195313s6.257813 16.152344.195313 22.429687l-101.824219 101.824219zm0 0"
+            fill="#fff"
+          />
+        </symbol>
+      </defs>
+    </svg>
+    <script src="index.js"></script>
+  </body>
+</html>
