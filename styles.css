@@ -16,7 +16,28 @@ body {
   line-height: 1.4;
   background: #F3706B;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+/* width */
+.container::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.3);
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #eeeeee;
+}
 .container {
   width: 100%;
   max-width: 500px;
@@ -75,7 +96,7 @@ input[type="checkbox"] {
 .tick {
   width: 30px;
   height: 30px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
@@ -84,10 +105,20 @@ input[type="checkbox"] {
 }
 
 .tick::before {
-  content: "✅";
+  background: #fff;
+  width: 30px;
+  border-radius: 50%;
+  height: 30px;
+  padding-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px; 
+  padding-bottom: 3px;  
+  justify-content: center;
+  align-items: center;
+  content: url("https://media.discordapp.net/attachments/712306462847926303/747431800208621598/unknown.png");
   font-size: 20px;
   border: none;
-  color: #fff;
+  color: #000;
   display: none;
 }
 
